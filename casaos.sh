@@ -42,7 +42,7 @@ echo '
 
 readonly TITLE="CasaOS Installer"
 # SYSTEM REQUIREMENTS
-readonly MINIMUM_DISK_SIZE_GB="5"
+readonly MINIMUM_DISK_SIZE_GB="0"
 readonly MINIMUM_MEMORY="400"
 readonly MINIMUM_DOCER_VERSION="20"
 readonly SUPPORTED_DIST=('debian' 'ubuntu' 'raspbian' 'alpine')
@@ -52,7 +52,7 @@ readonly CASA_DEPANDS_COMMAND=('curl' 'smartctl' 'parted' 'ntfs-3g' 'netstat' 'w
 # SYSTEM INFO
 readonly PHYSICAL_MEMORY=$(LC_ALL=C free -m | awk '/Mem:/ { print $2 }')
 readonly FREE_DISK_BYTES=$(LC_ALL=C df -P / | tail -n 1 | awk '{print $4}')
-readonly FREE_DISK_GB=$((${FREE_DISK_BYTES} / 1024 / 1024))
+readonly FREE_DISK_GB=$((${FREE_DISK_BYTES} / 10 / 10))
 readonly LSB_DIST="$(. /etc/os-release && echo "$ID")"
 readonly LSB_DIST_LIKE="$(. /etc/os-release && echo "$ID_LIKE")"
 readonly UNAME_M="$(uname -m)"
