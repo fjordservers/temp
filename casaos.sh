@@ -266,8 +266,7 @@ Check_Distribution() {
         exit 1
         ;;
     *alpine*)
-        Show 1 "Aborted, Alpine installation is not yet supported."
-        exit 1
+        Target_Distro="alpine"
         ;;
     *trisquel*)
         Target_Distro="debian"
