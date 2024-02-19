@@ -24,7 +24,7 @@ require() {
     echo $MISSING
 }
 
-[ "$(uname -s)" = "Linux" ] || error 'This script is intended to run on Linux only.'
+[ "$(uname -s)" = "Darwin" ] || error 'This script is intended to run on Darwin only.'
 
 ARCH=$(uname -m)
 case "$ARCH" in
@@ -62,7 +62,7 @@ if [ -n "$NEEDS" ]; then
 fi
 
 status "Downloading ollama..."
-curl --fail --show-error --location --progress-bar -o $TEMP_DIR/ollama "https://ollama.com/download/ollama-linux-arm64"
+curl --fail --show-error --location --progress-bar -o $TEMP_DIR/ollama "https://ollama.com/download/ollama-linux-$(uname -m)"
 
 for BINDIR in /usr/local/bin /usr/bin /bin; do
     echo $PATH | grep -q $BINDIR && break || continue
