@@ -45,7 +45,7 @@ readonly TITLE="CasaOS Installer"
 readonly MINIMUM_DISK_SIZE_GB="0"
 readonly MINIMUM_MEMORY="400"
 readonly MINIMUM_DOCER_VERSION="20"
-readonly SUPPORTED_DIST=('debian' 'ubuntu' 'raspbian' 'alpine')
+readonly SUPPORTED_DIST=('debian' 'ubuntu' 'raspbian' 'alpine' 'darwin')
 readonly CASA_DEPANDS_PACKAGE=('curl' 'smartmontools' 'parted' 'ntfs-3g' 'net-tools' 'whiptail' 'udevil' 'samba' 'cifs-utils')
 readonly CASA_DEPANDS_COMMAND=('curl' 'smartctl' 'parted' 'ntfs-3g' 'netstat' 'whiptail' 'udevil' 'samba' 'mount.cifs')
 
